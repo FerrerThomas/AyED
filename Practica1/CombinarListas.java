@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class CombinarListas {
     
     public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> lista1,ArrayList<Integer> lista2){
-        ArrayList<Integer> nueva = new ArrayList<Integer>(lista1);
-		nueva.addAll(lista2);
-		Collections.sort(nueva);
+        ArrayList<Integer> nueva = new ArrayList<Integer>(lista1); // lista nueva a partir de l1
+		nueva.addAll(lista2); // cargo todo l2 en la nueva donde ya tenia l1
+		Collections.sort(nueva); //ordeno la lista
 		return nueva;
     }
 
@@ -38,7 +38,7 @@ public class CombinarListas {
             System.out.print(i);
             System.err.print("|");
         }
-
+        // creo lista nueva y las combino
         ArrayList<Integer> listaNueva = new ArrayList<>();
         CombinarListas ejer = new CombinarListas();
         listaNueva = ejer.combinarOrdenado(lista1,lista2);
